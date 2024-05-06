@@ -33,7 +33,7 @@ curl -X POST "https://api.cloud.seqera.io/workflow/launch?workspaceId=3865913660
 
 The command line utility used to manage resources on Seqera Platform such as pipelines, runs, compute environments is called `tw`.
 
-The CLI provides an interface to launch pipelines, manage compute environments, retrieve run metadata, and monitor runs on the Platform.It provides a Nextflow-like experience for bioinformaticians to prefer the CLI, allows you store Seqera resource configuration (i.e. pipelines, compute environments) in Infrastructure-as-code, and is built on top of the [Seqera Platform API](#1-seqera-platform-api). The CLI offers more flexibility and easier interaction with the Platform, than the API.
+The CLI provides an interface to launch pipelines, manage compute environments, retrieve run metadata, and monitor runs on the Platform. It provides a Nextflow-like experience for bioinformaticians to prefer the CLI, allows you store Seqera resource configuration (i.e. pipelines, compute environments) in Infrastructure-as-code, and is built on top of the [Seqera Platform API](#1-seqera-platform-api). The CLI offers more flexibility and easier interaction with the Platform, than the API.
 
 ![Seqera Platform CLI](./assets/platform-cli.png)
 
@@ -64,4 +64,4 @@ launch:
     workspace: "seqeralabs/showcase"
 ```
 
-The `seqerakit` installation and usage details are available on [this](https://github.com/seqeralabs/seqerakit/) Github repository.
+The `seqerakit` installation and usage details are available on [this](https://github.com/seqeralabs/seqera-kit/) Github repository.
