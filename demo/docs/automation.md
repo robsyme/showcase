@@ -4,7 +4,7 @@ Seqera Platform provides multiple methods of programmatic interaction allowing y
 
 The Seqera Platform public API provides endpoints for performing all actions available on the interface, programmatically. The API can be accessed from `https://api.cloud.seqera.io`.
 
-The full list of endpoints is available in Seqera's OpenAPI schema found [here](https://cloud.seqera.io/openapi/seqera-api-latest.yml). The API requires an authentication token to be specified in every API request. This can be created in your user menu under **Your tokens**.
+The full list of endpoints is available in Seqera's OpenAPI schema found [here](https://cloud.seqera.io/openapi/index.html). The API requires an authentication token to be specified in every API request. This can be created in your user menu under **Your tokens**.
 
 ![Platform access token](./assets/generate-access-token.gif)
 
