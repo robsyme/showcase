@@ -2,32 +2,41 @@
 
 With Data Explorer, you can browse and interact with remote data repositories from organization workspaces in Seqera Platform. It supports AWS S3, Azure Blob Storage, and Google Cloud Storage repositories.
 
-## 1. Data Explorer features
+## 1. View pipeline outputs in Data Explorer
 
-- View bucket details
-  To view bucket details such as the cloud provider, bucket address, and credentials, select the information icon next to a bucket in the Data Explorer list.
+In Data Explorer, you are able to:
 
-- Search and filter buckets
-  Search for buckets by name and region (e.g., `region:eu-west-2`) in the search field, and filter by provider.
+  - **View bucket details**:
+    The cloud provider, bucket address, and credentials, by selecting the information icon next to a bucket in the Data Explorer list.
 
-- Hide buckets from list view
-  Workspace maintainers can hide buckets from the Data Explorer list view. Select multiple buckets, then select Hide in the Data Explorer toolbar. To hide buckets individually, select Hide from the options menu of a bucket in the list.
+![Bucket details](assets/data-explorer-view-details.gif)
 
-The Data Explorer list filter defaults to Only visible. Select Only hidden or All from the filtering menu to view hidden buckets in the list. You can Unhide a bucket from its options menu in the list view.
+  - **View bucket contents**
+    Select a bucket name from the Data Explorer list to view the contents of that bucket. 
+    
+    The file type, size, and path of objects are displayed in columns to the right of the object name. For example, we can take a look at the outputs of our nf-core/rnaseq run.
 
-- View bucket contents
-  Select a bucket name from the Data Explorer list to view the contents of that bucket. From the View cloud bucket page, you can browse directories and search for objects by name in a particular directory. The file type, size, and path of objects are displayed in columns to the right of the object name. To view bucket details such as the cloud provider, bucket address, and credentials, select the information icon.
+   ![Data Explorer bucket](assets/sp-cloud-data-explorer.gif)
 
-- Preview and download files
-  From the View cloud bucket page, you can preview and download files. Select the download icon in the Actions column to download a file directly from the list view. Select a file to open a preview window that includes a Download button.
+   - **Preview files**: 
+    Select a file to open a preview window that includes a Download button. For example, we can use Data Explorer to view the results of the nf-core/rnaseq pipeline that we executed. Specifically, we can take a look at the resultant gene counts of the salmon quantification step:
 
-## 2. View Run outputs in Data Explorer
+![Preview pipeline results](assets/data-explorer-preview-files.gif)
 
-Data Explorer can be used to view the outputs of your pipelines.
+## 2. Configure a bucket to browser in Data Explorer
+Data Explorer also enables you to add public cloud storage buckets to view and use data from resources such as:
 
-From the View cloud bucket page, you can:
+-  [The Cancer Genome Atlas (TCGA)](https://registry.opendata.aws/tcga/)
+- [1000 Genomes Project](https://registry.opendata.aws/1000-genomes/)
+- [NCBI SRA](https://registry.opendata.aws/ncbi-sra/)
+- [Genome in a Bottle Consortium](https://docs.opendata.aws/giab/readme.html)
+- [MSSNG Database](https://cloud.google.com/life-sciences/docs/resources/public-datasets/mssng)
+- [Genome Aggregation Database (gnomAD)](https://cloud.google.com/life-sciences/docs/resources/public-datasets/gnomad) 
 
-1. Preview and download files: Select the download icon in the 'Actions' column to download a file directly from the list view. Select a file to open a preview window that includes a Download button.
-2. Copy bucket/object paths: Select the Path of an object on the cloud bucket page to copy its absolute path to the clipboard. Use these object paths to specify input data locations during pipeline launch, or add them to a dataset for pipeline input.
+Select 'Add cloud bucket' from the Data Explorer tab to add individual buckets (or directory paths within buckets). 
 
-![Data Explorer bucket](assets/sp-cloud-data-explorer.gif)
+Specify the Provider, Bucket path, Name, Credentials, and Description, then select Add. For public cloud buckets, select Public from the Credentials drop-down menu.
+
+![Add public bucket](assets/data-explorer-add-bucket.gif)
+
+You are now able to use this data in your analysis without having to interact with Cloud consoles or CLI tools. 

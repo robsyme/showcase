@@ -2,7 +2,7 @@
 
 ## 1. Go to Launchpad
 
-Navigate back to the Launchpad to being executing the newly added nf-core/rnaseq pipeline.
+Navigate back to the Launchpad to begin executing the newly added nf-core/rnaseq pipeline.
 
 Select 'Launch' next to the pipeline of your choice to open the pipeline launch form.
 
@@ -18,7 +18,7 @@ All pipelines contain at least these parameters:
 
 **2. Labels:** Assign new or existing labels to the run.
 
-**3. Input/output options:** Specify paths to pipeline input datasets, output directories, and other pipeline-specific I/O options. input and outdir are required fields common to all pipelines:
+**3. Input/output options:** Specify paths to pipeline input datasets, output directories, and other pipeline-specific I/O options. Input and outdir are required fields common to all pipelines:
 
 For the 'input' parameter, click on the text box and click on the name of the dataset added in the previous step.
 
