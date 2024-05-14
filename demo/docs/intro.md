@@ -2,9 +2,14 @@
 
 #### What is Nextflow?
 
-Nextflow is a workflow system for creating scalable, portable, and reproducible workflows.
+Nextflow is a workflow system for creating scalable, portable, and reproducible workflows. Nextflow is composed of two parts - a language and runtime. 
 
-Nextflow is both a workflow language and an execution runtime that supports a wide range of execution platforms, including popular traditional grid scheduling systems such as Slurm and IBM LSF, and cloud services such as AWS Batch, Google Cloud Batch, Azure Batch and Kubernetes.
+
+The language offers many features useful for computational research, including:
+
+- A caching mechanism to allow users to quickly test new ideas without sacrificing reproducibility.
+- Naive Git support for version-aware workflows and runs.
+- Workflow portability. Nextflow workflows are abstracted from infrastructure specifics, so the same workflow can be run on popular traditional grid scheduling systems such as Slurm and IBM LSF, as well as cloud services such as AWS Batch, Google Cloud Batch, Azure Batch, and Kubernetes.
 
 #### Running a Nextflow pipeline
 
@@ -33,7 +38,7 @@ When you run a Nextflow pipeline via the CLI with `nextflow run`, it generates l
 
 #### Limitations of CLI
 
-Monitoring and launching via CLI, though direct, poses challenges, especially with complex or large-scale pipelines that are not as simple as just running Hello World:
+Nextflow on the command line is a powerful tool for an individual researcher to grow an idea into a reproducible lab notebook, and then into a production-grade reproducible pipeline. As you grow - either as a team, or in terms of run volume, new challenges arise including:
 
 - **Scalability**: As the number of tasks increases, manually checking individual log files becomes impractical.
 - **Real-Time Tracking**: The CLI does not offer an easy way to visualize real-time progress across multiple parallel tasks.
